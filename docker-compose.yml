@@ -1,0 +1,37 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: yesbot-postgres
+    environment:
+      POSTGRES_DB: yesbot
+      POSTGRES_USER: yesbot
+      POSTGRES_PASSWORD: yesbot
+    ports:
+      # 5432/6379 are taken by other local projects on this machine
+      - "127.0.0.1:5445:5432"
+    volumes:
+      - yesbot-pgdata:/var/lib/postgresql/data
+      # Creates the extra test database on first boot
+      - ./docker/postgres/init-test-db.sql:/docker-entrypoint-initdb.d/init-test-db.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U yesbot -d yesbot"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    container_name: yesbot-redis
+    ports:
+      - "127.0.0.1:6381:6379"
+    volumes:
+      - yesbot-redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  yesbot-pgdata:
+  yesbot-redisdata:

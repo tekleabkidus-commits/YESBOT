@@ -1,5 +1,7 @@
 # YesBot — Yes Bot Telegram Bot Management System
 
+> **Deployment note:** This is a separate Yes Bot fork of the application code. The inherited test history describes the original project, not a verified Laravel Cloud installation of this clone. Run `php artisan test` and follow [Laravel Cloud deployment](DEPLOY-LARAVEL-CLOUD.md) before production launch.
+
 A standalone Laravel 12 application containing the official **Yes Bot** Telegram bot
 (webhook mode, English-only), a **Filament v4 admin panel** for the marketing team,
 and a **durable queue-based sending engine**. Capacity must be measured against your deployment.

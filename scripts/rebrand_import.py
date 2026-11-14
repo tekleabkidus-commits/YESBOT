@@ -61,6 +61,8 @@ for directory, dirs, names in os.walk(ROOT):
         except UnicodeDecodeError:
             continue
         replaced = change(value)
+        if path.name == "phpunit.xml":
+            replaced = replaced.replace(f"{display}TestBot", f"{ident}TestBot")
         if path.name == ".env.example":
             replaced = re.sub(r"(?m)^APP_NAME=.*$", f'APP_NAME="{display}"', replaced)
             # Every deployment needs its OWN new Telegram bot and secret.
@@ -101,7 +103,7 @@ for filename in (f"{slug}-mark.svg", f"{slug}-alt-mark.svg"):
 # A brand-specific Laravel Cloud launch guide. No tokens or secrets are copied.
 guide = f"""# {display} — Laravel Cloud installation
 
-This repository is a complete, independent rebranded copy of the LiyuBetBot
+This repository is a complete, independent rebranded copy of the original
 Laravel 12 source. It contains no production user database or bot token.
 
 ## Create the app

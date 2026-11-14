@@ -1,7 +1,7 @@
 # YesBot — Standing Rules (read before any change)
 
 YesBot is the Yes Bot Telegram Bot Management System — a production marketing system for
-100,000+ Telegram users. Source of truth: `docs/YesBot-SPEC.md` (Spec v2, authoritative).
+100,000+ Telegram users. Source of truth: `docs/YESBOT-SPEC.md` (Spec v2, authoritative).
 Do **not** re-open settled decisions or re-audit the architecture; raise only genuine blockers.
 
 Internal name **YesBot**; every user-facing string is branded **Yes Bot** (your-yesbot-site.example).

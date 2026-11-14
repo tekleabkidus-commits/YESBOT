@@ -93,4 +93,4 @@ new Any message rule type. Restart queue workers after deploying new code.
 
 ## Referral rewards and promo-code redemptions
 
-See [Yes Bot rewards operations](docs/YES BOT-REWARDS-OPERATIONS.md). Run the new migrations, seed the settings, configure Telegram channel verification, upload real single-use promo codes in **Rewards → Promo Codes**, and test the 50/100/500 ETB redemptions before launching the promotion.
+See [Yes Bot rewards operations](docs/YESBOT-REWARDS-OPERATIONS.md). Run the new migrations, seed the settings, configure Telegram channel verification, upload real single-use promo codes in **Rewards → Promo Codes**, and test the 50/100/500 ETB redemptions before launching the promotion.

@@ -23,9 +23,7 @@ The suite covers role permissions, bilingual content, schema constraints, durabl
 
 ## Preview
 
-![Completed office](preview/backoffice-final.jpg)
-
-[Phone preview](preview/backoffice-mobile.jpg)
+Historical image previews are not bundled. Validate the live, separately branded backoffice on desktop and mobile after deployment.
 
 ## Deployment limits
 
